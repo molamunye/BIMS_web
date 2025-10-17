@@ -1,0 +1,232 @@
+/* Register-specific styles - Ethiopian-inspired */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #0f5f3a, #1a7c4a 50%, #d4af37 100%);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(15, 95, 58, 0.2);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  overflow: hidden;
+}
+
+.register-header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f5f3a, #1a7c4a);
+  color: white;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+.register-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.register-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.register-subtitle {
+  opacity: 0.8;
+  font-size: 0.875rem;
+}
+
+.tabs-wrapper {
+  padding: 0;
+}
+
+.tabs-nav {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background: #1a7c4a;
+  color: white;
+  box-shadow: 0 2px 8px rgba(26, 124, 74, 0.3);
+}
+
+.tab-content {
+  padding: 2rem 1.5rem;
+}
+
+.tab-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.tab-description {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  font-size: 0.875rem;
+}
+
+.input-field {
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.5rem;
+  background: hsl(var(--input));
+  color: hsl(var(--foreground));
+  padding: 0.75rem;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.input-field:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+  outline: none;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-eye {
+  position: absolute;
+  right: 0.75rem;
+  top: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.password-eye:hover {
+  opacity: 1;
+}
+
+.register-button {
+  width: 100%;
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+  font-size: 0.875rem;
+}
+
+.register-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+  box-shadow: 0 6px 16px hsl(var(--primary) / 0.4);
+  transform: translateY(-1px);
+}
+
+.register-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.register-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid hsl(var(--border));
+}
+
+.register-footer p {
+  margin: 0;
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}
+
+.signin-link {
+  color: hsl(var(--accent));
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.signin-link:hover {
+  color: hsl(var(--accent-foreground));
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .register-card {
+    margin: 1rem;
+  }
+
+  .tabs-nav {
+    margin: 0 0.5rem;
+  }
+
+  .tab-content {
+    padding: 1.5rem 1rem;
+  }
+}

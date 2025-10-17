@@ -1,0 +1,190 @@
+/* BrokerDashboard-specific styles - Ethiopian-inspired */
+.broker-dashboard {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: hsl(var(--primary));
+  margin: 0;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-card {
+  padding: 1.5rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  background: hsl(var(--card));
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.action-card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.action-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+.action-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.action-button.primary {
+  background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+}
+
+.action-button.primary:hover {
+  background: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+  box-shadow: 0 6px 16px hsl(var(--primary) / 0.4);
+  transform: translateY(-1px);
+}
+
+.action-button.secondary {
+  background: hsl(var(--secondary-light));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.action-button.secondary:hover {
+  background: hsl(var(--secondary));
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-1px);
+}
+
+.action-desc {
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.listings-section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+.listings-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: hsl(var(--card));
+}
+
+.listings-table th,
+.listings-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.listings-table th {
+  background: hsl(var(--muted));
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.status-cell {
+  font-weight: 500;
+  color: hsl(var(--primary));
+}
+
+.actions-cell {
+  white-space: nowrap;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.action-btn.edit {
+  background: hsl(var(--secondary-light));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.action-btn.edit:hover {
+  background: hsl(var(--secondary));
+}
+
+.action-btn.chat {
+  background: hsl(var(--primary-light));
+  color: hsl(var(--primary-foreground));
+}
+
+.action-btn.chat:hover {
+  background: hsl(var(--primary));
+}
+
+.action-btn.delete {
+  background: hsl(var(--destructive));
+  color: hsl(var(--destructive-foreground));
+}
+
+.action-btn.delete:hover {
+  background: hsl(var(--destructive-dark));
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .listings-table {
+    font-size: 0.875rem;
+  }
+
+  .listings-table th,
+  .listings-table td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .action-btn {
+    padding: 0.5rem;
+    margin-right: 0.25rem;
+  }
+}

@@ -1,0 +1,77 @@
+/* AuthForm.css */
+
+/* Shared wrapper for all auth screens */
+.auth-container {
+  @apply min-h-screen flex items-center justify-center p-4;
+  background: var(--gradient-hero);
+}
+
+/* Card container */
+.auth-card {
+  @apply w-full max-w-md shadow-strong rounded-2xl bg-white/95 backdrop-blur;
+}
+
+/* Logo and titles */
+.auth-header {
+  @apply text-center mb-8;
+}
+
+.auth-logo {
+  @apply flex justify-center items-center space-x-2 mb-4;
+}
+
+.auth-title {
+  @apply text-3xl font-bold text-foreground;
+}
+
+.auth-subtitle {
+  @apply text-muted-foreground;
+}
+
+/* Tabs styling */
+.auth-tabs {
+  @apply w-full;
+}
+
+.auth-tabs-list {
+  @apply grid w-full grid-cols-3 mb-6 bg-muted rounded-lg;
+}
+
+.auth-tabs-trigger {
+  @apply py-2 text-sm font-medium text-foreground hover:text-primary transition-colors;
+}
+
+.auth-tabs-trigger[data-state="active"] {
+  @apply bg-primary text-white rounded-md;
+}
+
+/* Input and labels */
+.auth-input-group {
+  @apply space-y-2;
+}
+
+.auth-input {
+  @apply w-full border border-border rounded-md px-3 py-2 focus:ring-2 focus:ring-primary focus:outline-none;
+}
+
+.auth-label {
+  @apply text-sm font-medium text-foreground;
+}
+
+/* Button styling */
+.auth-button {
+  @apply w-full bg-primary text-white py-2 rounded-md hover:bg-primary-light transition-all duration-200;
+}
+
+.auth-button:disabled {
+  @apply opacity-70 cursor-not-allowed;
+}
+
+/* Footer links */
+.auth-footer {
+  @apply mt-6 text-center text-sm text-muted-foreground;
+}
+
+.auth-footer a {
+  @apply text-secondary hover:underline font-medium;
+}
